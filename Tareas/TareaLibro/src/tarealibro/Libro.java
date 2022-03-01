@@ -11,19 +11,33 @@ package tarealibro;
 public class Libro {
     private String titulo;
     private String autor;
+    private String color;
     private int paginas;
+    private int ano;
 
     public Libro() {
     }
 
-    public Libro(String titulo, String autor, int paginas) {
+    public Libro(String titulo, String autor, String color, int paginas, int ano) {
         this.titulo = titulo;
         this.autor = autor;
+        this.color = color;
         this.paginas = paginas;
+        this.ano = ano;
     }
+
+    public int getAno() {
+        return ano;
+    }
+
+    public void setAno(int ano) {
+        this.ano = ano;
+    }
+
     public String getTitulo() {
         return titulo;
     }
+
     public void setTitulo(String titulo) {
         this.titulo = titulo;
     }
@@ -36,6 +50,14 @@ public class Libro {
         this.autor = autor;
     }
 
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
     public int getPaginas() {
         return paginas;
     }
@@ -43,8 +65,8 @@ public class Libro {
     public void setPaginas(int paginas) {
         this.paginas = paginas;
     }
-
-//metodos
+    
+    //metodos
     public void pag(int pagina){
     System.out.println("Van en la pagina: "+ pagina + "del libro "+this.titulo);
 }
